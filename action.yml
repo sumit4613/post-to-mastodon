@@ -1,0 +1,28 @@
+name: "post-to-mastodon"
+description: "Github Action that sends a toot to Mastodon when you post a new blog post."
+author: "Sumit Singh"
+inputs:
+  message:
+    description: "The message which we send to Mastodon."
+    default: "Hello, folks! I just posted a new blog post. Check it out!"
+  base-blog-url:
+    description: >
+      Base url of the blog post. This is used to construct the link to the blog post. For example, 
+      if the blog post is at https://sumit4613.github.io/posts/django_middlewares/, then 
+      the base-blog-url is https://sumit4613.github.io/posts/
+    required: true
+  access-token:
+    description: "Application access token, generated from mastodon dashboard."
+    required: true
+  host:
+    description: "Your mastodon instance host."
+    default: "fosstodon.org"
+  port:
+    description: "Your mastodon instance port."
+    default: "443"
+  api:
+    description: "Your mastodon instance api."
+    default: "api/v1"
+runs:
+  using: "docker"
+  image: "Dockerfile"
