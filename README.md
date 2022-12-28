@@ -43,7 +43,7 @@ jobs:
           echo "RECENTLY_ADDED_FILES=$RECENTLY_ADDED_FILES" >> $GITHUB_ENV
 
       - name: Post to Mastodon
-        uses: sumit4613/post-to-mastodon@0.1
+        uses: sumit4613/post-to-mastodon@v0.1
         with:
           # This is the message that will be sent to Mastodon, override it with your own message if you want
           message: "Hello, folks! I just posted a new blog post. Check it out!"
