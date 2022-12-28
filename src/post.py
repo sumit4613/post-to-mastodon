@@ -4,7 +4,7 @@ import uuid
 
 import requests
 
-from src.constants import Protocol, PORT_443, POST_PATH, PUBLISH_STR, Signs
+from constants import Protocol, PORT_443, POST_PATH, PUBLISH_STR, Signs
 
 logger = logging.getLogger(__name__)
 
