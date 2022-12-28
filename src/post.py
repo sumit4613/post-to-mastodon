@@ -1,3 +1,4 @@
+#!/usr/local/bin/python
 import logging
 import os
 import uuid
@@ -56,15 +57,14 @@ def post_to_mastodon(url_slug_: str) -> None:
     response.raise_for_status()
 
 
-if __name__ == "__main__":
-    if PUBLISH_STR in COMMIT_MESSAGE_WITH_FILE_NAMES:
-        logger.info("Parsing commit message and getting the url slug")
-        if url_slug := parse_commit_message(COMMIT_MESSAGE_WITH_FILE_NAMES):
-            logger.info("Posting to Mastodon")
-            post_to_mastodon(url_slug)
-            logger.info("Posted to Mastodon")
-        else:
-            logger.info("No url slug found in commit message. Skipped posting to Mastodon")
-
+if PUBLISH_STR in COMMIT_MESSAGE_WITH_FILE_NAMES:
+    print("Parsing commit message and getting the url slug")
+    if url_slug := parse_commit_message(COMMIT_MESSAGE_WITH_FILE_NAMES):
+        print("Posting to Mastodon")
+        post_to_mastodon(url_slug)
+        print("Posted to Mastodon")
     else:
-        logger.info("No new files to post")
+        print("No url slug found in commit message. Skipped posting to Mastodon")
+
+else:
+    print("No new files to post")

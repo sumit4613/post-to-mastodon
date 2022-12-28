@@ -5,19 +5,19 @@ inputs:
   message:
     description: "The message which we send to Mastodon."
     default: "Hello, folks! I just posted a new blog post. Check it out!"
-  base-blog-url:
+  base_blog_url:
     description: >
       Base url of the blog post. This is used to construct the link to the blog post. For example, 
       if the blog post is at https://sumit4613.github.io/posts/django_middlewares/, then 
       the base-blog-url is https://sumit4613.github.io/posts/
     required: true
-  base-directory:
+  base_directory:
     description: >
       The base directory of the blog posts. This is used to construct the link to the blog post. For example,
       in my blog all posts are stored in content/posts/ directory. So, the base-directory is content/posts/.
     required: true
     default: "content/posts/"
-  access-token:
+  access_token:
     description: "Application access token, generated from mastodon dashboard."
     required: true
   host:
