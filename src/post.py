@@ -29,10 +29,12 @@ COMMIT_MESSAGE_WITH_FILE_NAMES: str = os.environ["RECENTLY_ADDED_FILES"]
 
 
 def parse_commit_message(commit_message_with_file_names: str) -> str:
+    print(f"commit_message_with_file_names: {commit_message_with_file_names}")
     message_strings = commit_message_with_file_names.split(Signs.PIPE)
     for strings in message_strings:
         stripped_string = strings.strip()
         if stripped_string.startswith(BASE_DIRECTORY_NAME):
+            print(f"stripped_string: {stripped_string}")
             # eg: "content/posts/python-decorators.md"
             # I'm returning the first file name that matches the base directory name
             # I'm assuming that the file name will be the same as the url slug
@@ -60,7 +62,7 @@ def post_to_mastodon(url_slug_: str) -> None:
 if PUBLISH_STR in COMMIT_MESSAGE_WITH_FILE_NAMES:
     print("Parsing commit message and getting the url slug")
     if url_slug := parse_commit_message(COMMIT_MESSAGE_WITH_FILE_NAMES):
-        print("Posting to Mastodon")
+        print(f"Posting to Mastodon with url slug: {url_slug}")
         post_to_mastodon(url_slug)
         print("Posted to Mastodon")
     else:
