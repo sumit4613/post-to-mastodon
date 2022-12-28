@@ -9,17 +9,17 @@ from constants import Protocol, PORT_443, POST_PATH, PUBLISH_STR, Signs
 logger = logging.getLogger(__name__)
 
 try:
-    ACCESS_TOKEN = os.environ["access-token"]
+    ACCESS_TOKEN = os.environ["INPUT_ACCESS_TOKEN"]
 except KeyError as e:
     raise ValueError("access-token is required") from e
 
-HOST = os.environ["host"]
-PORT = os.environ["port"]
-API = os.environ["api"]
-MESSAGE = os.environ["message"]
-BASE_DIRECTORY_NAME: str = os.environ["base-directory"]
+HOST = os.environ["INPUT_HOST"]
+PORT = os.environ["INPUT_PORT"]
+API = os.environ["INPUT_API"]
+MESSAGE = os.environ["INPUT_MESSAGE"]
+BASE_DIRECTORY_NAME: str = os.environ["INPUT_BASE_DIRECTORY"]
 # TODO: support complex blog urls like https://www.example.com/blog/2020/01/01/first-post
-BASE_BLOG_URL = os.environ["base-blog-url"]
+BASE_BLOG_URL = os.environ["INPUT_BASE_BLOG_URL"]
 
 PROTOCOL: str = Protocol.HTTPS if PORT == PORT_443 else Protocol.HTTP
 BASE_URL: str = f"{PROTOCOL}{HOST}/{API}{POST_PATH}"
