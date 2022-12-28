@@ -1,6 +1,9 @@
 name: "post-to-mastodon"
 description: "Github Action that sends a toot to Mastodon when you post a new blog post."
 author: "Sumit Singh"
+branding:
+  icon: "play"
+  color: "blue"
 inputs:
   message:
     description: "The message which we send to Mastodon."
