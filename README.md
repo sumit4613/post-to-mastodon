@@ -1,7 +1,7 @@
 # Post to Mastodon GitHub Action
 
-[![GitHub
-release](https://img.shields.io/github/release/sumit4613/post-to-mastodon.svg?style=flat-square)](https://github.com/sumit4613/post-to-mastodon/releases/latest)
+[![GitHub release](https://img.shields.io/github/release/sumit4613/post-to-mastodon.svg?style=play)](https://github.com/sumit4613/post-to-mastodon/releases/latest)
+[![GitHub marketplace](https://img.shields.io/badge/marketplace-post--to--mastodon-blue?logo=github&style=play)](https://github.com/marketplace/actions/post-to-mastodon)
 [![Licence](https://img.shields.io/github/license/sumit4613/post-to-mastodon)](https://github.com/sumit4613/post-to-mastodon/blob/main/LICENSE)
 
 ## About
