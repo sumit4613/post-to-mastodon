@@ -1,13 +1,10 @@
 #!/usr/local/bin/python
-import logging
 import os
 import uuid
 
 import requests
 
 from constants import Protocol, PORT_443, POST_PATH, PUBLISH_STR, Signs
-
-logger = logging.getLogger(__name__)
 
 try:
     ACCESS_TOKEN = os.environ["INPUT_ACCESS_TOKEN"]
