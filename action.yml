@@ -10,8 +10,8 @@ inputs:
     default: "Hello, folks! I just posted a new blog post. Check it out!"
   base_blog_url:
     description: >
-      Base url of the blog post. This is used to construct the link to the blog post. For example, 
-      if the blog post is at https://sumit4613.github.io/posts/django_middlewares/, then 
+      Base url of the blog post. This is used to construct the link to the blog post. For example,
+      if the blog post is at https://sumit4613.github.io/posts/django_middlewares/, then
       the base-blog-url is https://sumit4613.github.io/posts/
     required: true
   base_directory:
